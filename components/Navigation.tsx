@@ -221,7 +221,7 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gray-700 backdrop-blur-md shadow-xl border-b border-gray-600">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-brand-blue-dark backdrop-blur-md shadow-xl border-b border-gray-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
@@ -300,8 +300,8 @@ const Navigation = () => {
                                       className="dropdown-item flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-600/50 transition-all duration-200 group border border-transparent hover:border-gray-600/50"
                                       onClick={closeDropdown}
                                     >
-                                      <div suppressHydrationWarning className={"w-7 h-7 rounded-md flex items-center justify-center transition-all duration-200 " + (subItem.color ? ("bg-gradient-to-br " + subItem.color) : "bg-gray-600/50") + " group-hover:brightness-110"}>
-                                        {React.createElement(subItem.icon, { className: "w-4 h-4 text-white drop-shadow-sm" })}
+                                      <div className="w-7 h-7 rounded-md bg-brand-blue flex items-center justify-center transition-all duration-200">
+                                        {React.createElement(subItem.icon, { className: "w-4 h-4 text-white" })}
                                       </div>
                                       <div className="flex-1 min-w-0">
                                         <div className="flex items-center space-x-2">
@@ -331,8 +331,8 @@ const Navigation = () => {
                                     className="dropdown-item flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-600/50 transition-all duration-200 group border border-transparent hover:border-gray-600/50"
                                     onClick={closeDropdown}
                                   >
-                                    <div suppressHydrationWarning className={"w-7 h-7 rounded-md flex items-center justify-center transition-all duration-200 " + (subItem.color ? ("bg-gradient-to-br " + subItem.color) : "bg-gray-600/50") + " group-hover:brightness-110"}>
-                                      {React.createElement(subItem.icon, { className: "w-4 h-4 text-white drop-shadow-sm" })}
+                                    <div className="w-7 h-7 rounded-md bg-brand-blue flex items-center justify-center transition-all duration-200">
+                                      {React.createElement(subItem.icon, { className: "w-4 h-4 text-white" })}
                                     </div>
                                     <div className="flex-1 min-w-0">
                                       <div className="flex items-center space-x-2">
@@ -367,7 +367,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block flex-shrink-0">
             <Link href="/contact">
-              <button className="bg-gradient-to-r bg-brand-blue text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-brand-blue-dark hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-1 group">
+              <button className="bg-brand-blue text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-brand-blue-dark transition-all duration-200">
                 <span>Contact Us</span>
               </button>
             </Link>
@@ -395,7 +395,7 @@ const Navigation = () => {
           <div className="md:hidden border-t border-gray-600/50 bg-gray-700 backdrop-blur-xl shadow-2xl rounded-b-xl overflow-hidden">
             <div className="px-3 py-3 space-y-1">
               {navigationItems.map((item, index) => (
-                <div key={item.name}>
+                <div className="text-white" key={item.name}>
                   {item.hasDropdown ? (
                     <div className="space-y-1">
                       <button
@@ -416,11 +416,11 @@ const Navigation = () => {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-600/40 hover:shadow-sm transition-all duration-300 group border border-transparent hover:border-gray-600/50"
+                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-600/40 transition-all duration-200 group border border-transparent hover:border-gray-600/50"
                               onClick={() => setIsOpen(false)}
                             >
-                              <div className="w-10 h-10 rounded-lg bg-gray-600 flex items-center justify-center group-hover:bg-gray-500 transition-all duration-300 shadow-sm flex-shrink-0">
-                                {React.createElement(subItem.icon, { className: "w-5 h-5 text-gray-200 group-hover:text-white transition-colors duration-300" })}
+                              <div className="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center transition-all duration-200 flex-shrink-0">
+                                {React.createElement(subItem.icon, { className: "w-5 h-5 text-white" })}
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center space-x-2 mb-1">
@@ -455,10 +455,10 @@ const Navigation = () => {
               ))}
 
               {/* CTA */}
-              <div className="border-t border-gray-200 pt-3 mt-3">
+              <div className="border-t border-gray-600 pt-3 mt-3">
                 <Link
                   href="/contact"
-                  className="block w-full text-center py-3 px-4 bg-gradient-to-r from-brand-yellow to-yellow-400 text-brand-black rounded-lg font-medium hover:from-yellow-400 hover:to-yellow-500 hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+                  className="block w-full text-center py-3 px-4 bg-brand-blue text-white rounded-lg font-medium hover:bg-brand-blue-dark transition-all duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Us

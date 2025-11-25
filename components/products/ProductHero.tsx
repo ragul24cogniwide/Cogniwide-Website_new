@@ -49,7 +49,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({
     return (
       <div className="relative overflow-hidden">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+        <section className="relative min-h-screen flex items-center justify-center bg-white">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
             <div 
@@ -78,7 +78,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({
                   transition={{ duration: 0.6 }}
                   className="flex justify-center lg:justify-start mb-6"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black shadow-2xl shadow-yellow-500/25">
+                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-r bg-brand-blue text-white">
                     {product.icon}
                   </div>
                 </motion.div>
