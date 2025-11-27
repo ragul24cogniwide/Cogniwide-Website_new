@@ -458,7 +458,7 @@ const Navigation = () => {
               <div className="border-t border-gray-600 pt-3 mt-3">
                 <Link
                   href="/contact"
-                  className="block w-full text-center py-3 px-4 bg-brand-blue text-white rounded-lg font-medium hover:bg-brand-blue-dark transition-all duration-200"
+                  className="block w-full text-center py-3 px-4 bg-brand-yellow text-white rounded-lg font-medium hover:bg-brand-blue-dark transition-all duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Us
